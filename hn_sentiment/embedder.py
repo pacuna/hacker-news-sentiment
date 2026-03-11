@@ -1,5 +1,4 @@
 import chromadb
-import uuid
 
 
 def build_collection(comments: list[dict]):
@@ -9,9 +8,12 @@ def build_collection(comments: list[dict]):
     The default embedding function (all-MiniLM-L6-v2) is used automatically.
     """
     client = chromadb.EphemeralClient()
-    # Use a unique collection name to avoid conflicts in tests
-    collection_name = f"hn_comments_{uuid.uuid4().hex[:8]}"
-    collection = client.create_collection(collection_name)
+    # Delete existing collection if it exists to ensure clean state
+    try:
+        client.delete_collection("hn_comments")
+    except Exception:
+        pass
+    collection = client.create_collection("hn_comments")
 
     if not comments:
         return collection
