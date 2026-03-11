@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hn-sentiment"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",
+    "rich>=13.7",
+    "httpx>=0.27",
+    "chromadb>=0.5",
+    "anthropic>=0.30",
+]
+
+[project.scripts]
+hn-sentiment = "hn_sentiment.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hn_sentiment*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-mock>=3.12",
+]
