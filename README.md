@@ -19,7 +19,7 @@ A CLI tool that fetches any Hacker News thread, generates an Amazon-style sentim
 ## Installation
 
 ```bash
-git clone https://github.com/youruser/hacker-news-sentiment.git
+git clone https://github.com/pacuna/hacker-news-sentiment.git
 cd hacker-news-sentiment
 pip install -e .
 ```
