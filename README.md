@@ -1,5 +1,7 @@
 # HN Sentiment
 
+[![CI](https://github.com/pacuna/hacker-news-sentiment/actions/workflows/ci.yml/badge.svg)](https://github.com/pacuna/hacker-news-sentiment/actions/workflows/ci.yml)
+
 A CLI tool that fetches any Hacker News thread, generates an Amazon-style sentiment summary of the comments using Claude, and lets you have a follow-up conversation about the discussion powered by RAG.
 
 ## Features
