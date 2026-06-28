@@ -20,9 +20,26 @@ A CLI tool that fetches any Hacker News thread, generates an Amazon-style sentim
 
 ## Installation
 
+This project requires Python 3.11+. Installing in editable mode also requires pip 21.3+ (for `pyproject.toml`-based builds), so it's recommended to install inside a virtual environment.
+
+### Using [uv](https://docs.astral.sh/uv/) (recommended)
+
 ```bash
 git clone https://github.com/pacuna/hacker-news-sentiment.git
 cd hacker-news-sentiment
+uv venv
+source .venv/bin/activate
+uv pip install -e .
+```
+
+### Using pip
+
+```bash
+git clone https://github.com/pacuna/hacker-news-sentiment.git
+cd hacker-news-sentiment
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
 pip install -e .
 ```
 
